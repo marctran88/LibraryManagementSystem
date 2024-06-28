@@ -1,0 +1,325 @@
+## Introduction
+
+This document outlines the test cases for the Library Management System. The system provides functionalities for book and member management, including adding, removing, borrowing, returning books, and generating reports.
+
+## Test Cases
+
+### 1. Add Book
+
+**Description**: Verify that a new book can be added to the library.  
+
+**Steps**:
+1. Navigate to the "Add Book" option.
+2. Enter the book title.
+3. Enter the book author.
+4. Enter the book ISBN.
+5. Confirm the addition.
+
+**Expected Result**: The book is added to the library, and a confirmation message is displayed.
+
+
+### 2. Add Book with Existing ISBN
+
+**Description**: Verify that a book with an existing ISBN cannot be added.  
+
+**Steps**:
+1. Navigate to the "Add Book" option.
+2. Enter the book title.
+3. Enter the book author.
+4. Enter the existing book ISBN.
+5. Confirm the addition.
+
+**Expected Result**: The system displays an error message stating that the book with the same ISBN already exists.
+
+
+### 3. Remove Book
+
+**Description**: Verify that a book can be removed from the library.  
+
+**Steps**:
+1. Navigate to the "Remove Book" option.
+2. Enter the book ISBN.
+3. Confirm the removal.
+
+**Expected Result**: The book is removed from the library, and a confirmation message is displayed.
+
+
+### 4. Remove Book with Active Borrow Transactions
+
+**Description**: Verify that a book with active borrow transactions cannot be removed.  
+
+**Steps**:
+1. Navigate to the "Remove Book" option.
+2. Enter the book ISBN.
+3. Confirm the removal.
+
+**Expected Result**: The system displays an error message stating that the book cannot be removed due to active borrow transactions.
+
+
+### 5. Add Member
+
+**Description**: Verify that a new member can be added to the library.  
+
+**Steps**:
+1. Navigate to the "Add Member" option.
+2. Enter the member name.
+3. Enter the member ID.
+4. Enter the member type (student/teacher).
+5. Confirm the addition.
+
+**Expected Result**: The member is added to the library, and a confirmation message is displayed.
+
+
+### 6. Add Member with Existing ID
+
+**Description**: Verify that a member with an existing ID cannot be added.  
+
+**Steps**:
+1. Navigate to the "Add Member" option.
+2. Enter the member name.
+3. Enter the existing member ID.
+4. Enter the member type (student/teacher).
+5. Confirm the addition.
+
+**Expected Result**: The system displays an error message stating that a member with the same ID already exists.
+
+
+### 7. Remove Member
+
+**Description**: Verify that a member can be removed from the library.  
+
+**Steps**:
+1. Navigate to the "Remove Member" option.
+2. Enter the member ID.
+3. Confirm the removal.
+
+**Expected Result**: The member is removed from the library, and a confirmation message is displayed.
+
+
+### 8. Remove Member with Active Borrow Transactions
+
+**Description**: Verify that a member with active borrow transactions cannot be removed.  
+
+**Steps**:
+1. Navigate to the "Remove Member" option.
+2. Enter the member ID.
+3. Confirm the removal.
+
+**Expected Result**: The system displays an error message stating that the member cannot be removed due to active borrow transactions.
+
+
+### 9. Borrow Book
+
+**Description**: Verify that a book can be borrowed by a member.  
+
+**Steps**:
+1. Navigate to the "Borrow Book" option.
+2. Enter the member ID.
+3. Enter the book ISBN.
+4. Enter the due date.
+5. Confirm the borrowing.
+
+**Expected Result**: The book is marked as borrowed, and a confirmation message is displayed.
+
+
+### 10. Borrow Already Borrowed Book
+
+**Description**: Verify that a book that is already borrowed cannot be borrowed again.  
+
+**Steps**:
+1. Navigate to the "Borrow Book" option.
+2. Enter the member ID.
+3. Enter the book ISBN.
+4. Enter the due date.
+5. Confirm the borrowing.
+
+**Expected Result**: The system displays an error message stating that the book is already borrowed.
+
+
+### 11. Return Book
+
+**Description**: Verify that a borrowed book can be returned.  
+
+**Steps**:
+1. Navigate to the "Return Book" option.
+2. Enter the member ID.
+3. Enter the book ISBN.
+4. Confirm the return.
+
+**Expected Result**: The book is marked as returned, and a confirmation message is displayed.
+
+
+### 12. List All Available Books
+
+**Description**: Verify that all available books are listed.  
+
+**Steps**:
+1. Navigate to the "List All Available Books" option.
+
+**Expected Result**: The system displays a list of all available books.
+
+
+### 13. List All Members
+
+**Description**: Verify that all members are listed with their name, member ID, and type.  
+
+**Steps**:
+1. Navigate to the "List All Members" option.
+
+**Expected Result**: The system displays a list of all members with their name, member ID, and type (student/teacher).
+
+
+### 14. Search Books by Title
+
+**Description**: Verify that books can be searched by title.  
+
+**Steps**:
+1. Navigate to the "Search Books" option.
+2. Select "Title".
+3. Enter the book title.
+4. Confirm the search.
+
+**Expected Result**: The system displays a list of books that match the title.
+
+
+### 15. Search Books by Author
+
+**Description**: Verify that books can be searched by author.  
+
+**Steps**:
+1. Navigate to the "Search Books" option.
+2. Select "Author".
+3. Enter the book author.
+4. Confirm the search.
+
+**Expected Result**: The system displays a list of books that match the author.
+
+
+### 16. Search Books by ISBN
+
+**Description**: Verify that books can be searched by ISBN.  
+
+**Steps**:
+1. Navigate to the "Search Books" option.
+2. Select "ISBN".
+3. Enter the book ISBN.
+4. Confirm the search.
+
+**Expected Result**: The system displays the book that matches the ISBN.
+
+
+### 17. Update Member Information
+
+**Description**: Verify that member information can be updated.  
+
+**Steps**:
+1. Navigate to the "Update Member Information" option.
+2. Enter the current member ID.
+3. Enter the new name.
+4. Enter the new member ID.
+5. Confirm the update.
+
+**Expected Result**: The member information is updated, and a confirmation message is displayed.
+
+
+### 18. Generate Borrowed Books Report
+
+**Description**: Verify that a report of all borrowed books is generated.  
+
+**Steps**:
+1. Navigate to the "Generate Borrowed Books Report" option.
+
+**Expected Result**: The system displays a list of all borrowed books, including the member (name, member ID) who borrowed the book, and the borrowed date.
+
+
+
+### 19. Generate Overdue Books Report
+
+**Description**: Verify that a report of all overdue books is generated.  
+
+**Steps**:
+1. Navigate to the "Generate Overdue Books Report" option.
+
+**Expected Result**: The system displays a list of all overdue books, including the member (name, member ID) who borrowed the book, the borrowed date, and the due date.
+
+
+### 20. Prevent Adding Book with Invalid ISBN Format
+
+**Description**: Verify that the system prevents adding a book with an invalid ISBN format.  
+
+**Steps**:
+1. Navigate to the "Add Book" option.
+2. Enter the book title.
+3. Enter the book author.
+4. Enter an invalid ISBN format.
+5. Confirm the addition.
+
+**Expected Result**: The system displays an error message stating that the ISBN format is invalid.
+
+
+### 21. Prevent Adding Member with Invalid Member Type
+
+**Description**: Verify that the system prevents adding a member with an invalid member type.  
+
+**Steps**:
+1. Navigate to the "Add Member" option.
+2. Enter the member name.
+3. Enter the member ID.
+4. Enter an invalid member type.
+5. Confirm the addition.
+
+**Expected Result**: The system displays an error message stating that the member type is invalid.
+
+
+### 22. Prevent Borrowing Book by Non-Existent Member
+
+**Description**: Verify that the system prevents borrowing a book by a non-existent member.  
+
+**Steps**:
+1. Navigate to the "Borrow Book" option.
+2. Enter a non-existent member ID.
+3. Enter the book ISBN.
+4. Enter the due date.
+5. Confirm the borrowing.
+
+**Expected Result**: The system displays an error message stating that the member does not exist.
+
+
+### 23. Prevent Returning Book by Non-Existent Member
+
+**Description**: Verify that the system prevents returning a book by a non-existent member.  
+
+**Steps**:
+1. Navigate to the "Return Book" option.
+2. Enter a non-existent member ID.
+3. Enter the book ISBN.
+4. Confirm the return.
+
+**Expected Result**: The system displays an error message stating that the member does not exist.
+
+
+### 24. Prevent Borrowing Non-Existent Book
+
+**Description**: Verify that the system prevents borrowing a non-existent book.  
+
+**Steps**:
+1. Navigate to the "Borrow Book" option.
+2. Enter the member ID.
+3. Enter a non-existent book ISBN.
+4. Enter the due date.
+5. Confirm the borrowing.
+
+**Expected Result**: The system displays an error message stating that the book does not exist.
+
+
+### 25. Prevent Returning Non-Existent Book
+
+**Description**: Verify that the system prevents returning a non-existent book.  
+
+**Steps**:
+1. Navigate to the "Return Book" option.
+2. Enter the member ID.
+3. Enter a non-existent book ISBN.
+4. Confirm the return.
+
+**Expected Result**: The system displays an error message stating that the book does not exist.
