@@ -54,12 +54,9 @@ public abstract class AbstractBook implements IBook {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", ISBN='" + ISBN + '\'' +
-                ", isBorrowed=" + isBorrowed +
-                ", dueDate=" + dueDate +
-                '}';
+        return 
+                "Title='" + title + 
+                ", Author='" + author + 
+                ", ISBN='" + ISBN;
     }
 }
