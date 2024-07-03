@@ -15,10 +15,6 @@ import java.util.Date;
 public class Library implements ILibrary {
     @Override
     public void addBook(Book book) {
-        /*if (!isValidISBN(book.getISBN())) {
-            System.out.println("Invalid ISBN format.");
-            return;
-        }*/
         if (bookExists(book.getISBN())) {
             System.out.println("Book with ISBN " + book.getISBN() + " already exists.");
             return;
@@ -86,7 +82,7 @@ public class Library implements ILibrary {
             while (rs.next()) {
                 Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("isbn"));
                 book.setBorrowed(rs.getBoolean("is_borrowed"));
-                books.add(book);
+                System.out.println(book);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -105,7 +101,7 @@ public class Library implements ILibrary {
             while (rs.next()) {
                 Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("isbn"));
                 book.setBorrowed(rs.getBoolean("is_borrowed"));
-                books.add(book);
+                System.out.println(book);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -141,7 +137,7 @@ public class Library implements ILibrary {
             while (rs.next()) {
                 Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("isbn"));
                 book.setBorrowed(rs.getBoolean("is_borrowed"));
-                System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", ISBN: " + book.getISBN());
+                System.out.println(book);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -285,10 +281,6 @@ public class Library implements ILibrary {
         }
         return false;
     }
-
-    /*private boolean isValidISBN(String isbn) {
-        return isbn.matches("\\d{10}") || isbn.matches("\\d{13}");
-    }*/
 
     @Override
     public void borrowBook(String memberId, String isbn, Date dueDate) {
