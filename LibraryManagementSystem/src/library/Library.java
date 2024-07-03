@@ -160,7 +160,7 @@ public class Library implements ILibrary {
                 Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("isbn"));
                 book.setBorrowed(true);
                 book.setDueDate(rs.getDate("due_date"));
-                System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", ISBN: " + book.getISBN() + ", Borrowed by: " + rs.getString("member_name") + " (ID: " + rs.getString("member_id") + "), Borrowed Date: " + rs.getDate("borrow_date"));
+                System.out.println(book + ", Borrowed by: " + rs.getString("member_name") + " (ID: " + rs.getString("member_id") + "), Borrowed Date: " + rs.getDate("borrow_date"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -183,7 +183,7 @@ public class Library implements ILibrary {
                 Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("isbn"));
                 book.setBorrowed(true);
                 book.setDueDate(rs.getDate("due_date"));
-                System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", ISBN: " + book.getISBN() + ", Borrowed by: " + rs.getString("member_name") + " (ID: " + rs.getString("member_id") + "), Borrowed Date: " + rs.getDate("borrow_date") + ", Due Date: " + book.getDueDate());
+                System.out.println(book + ", Borrowed by: " + rs.getString("member_name") + " (ID: " + rs.getString("member_id") + "), Borrowed Date: " + rs.getDate("borrow_date") + ", Due Date: " + book.getDueDate());
             }
         } catch (SQLException e) {
             e.printStackTrace();
